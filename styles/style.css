@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.bd-navbar{
+    background-color: #563d7c;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 10%);
+}
+.bd-navbar-2{
+    background-color: #563d7c;
+}
+.btn-custom{
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #563d7c;
+    cursor: pointer;
+    color: #fff;
+}
+.btn-custom:hover{
+    background: #563d7cb6;
+}
+.btn-width{
+    width: 100%;
+    height: 100%;
+}
+.output{
+    font-size: 1.3rem;
+    overflow-wrap: anywhere;
+}
+.output p{
+    opacity: 0.7;
+    width: 100%;
+}
+.spl-container{
+    min-height: 30vh;
+}
+
+header,main,footer{
+    font-family: 'Ubuntu', sans-serif;
+}
