@@ -14,7 +14,6 @@
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"
     defer></script>
 
-  <link rel="stylesheet" href="./styles/overWriteBootstrapCss.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -58,7 +57,7 @@
 
     <div class="row">
 
-      <div class="col-sm-12 col-md-6 my-5">
+      <div class="col-sm-12 col-md-6 my-5 d-flex align-items-center">
         <div class="container-fluid">
           <div class="container">
             <div class="heading text-center">
@@ -75,7 +74,7 @@
         </div>
       </div>
 
-      <div class="col-sm-12 col-md-6 my-5">
+      <div class="col-sm-12 col-md-6 my-5 d-flex align-items-center">
         <div class="container">
           <div class="heading text-center">
             <h5>Currnet Date and Time</h5>
@@ -99,39 +98,39 @@
             <div class="p-4 border border-dark">
               <div class="row">
                 <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="round()">Get Name of Today</button>
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="getNowDay()">Get Name of Today</button>
                 </div>
                 <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="ceil()">Calculate Days Passed since I Born</button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="floor()">When is your next Birthday?</button>
-                </div>
-                <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="random()">Greet User</button>
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="calDays()">Calculate Days Passed since I Born</button>
                 </div>
               </div>
               <div class="row">
                 <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="dice()">Tell Time 1</button>
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="nextBd()">When is your next Birthday?</button>
                 </div>
                 <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="password()">Tell Time 2</button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="string()">Tell Time 3</button>
-                </div>
-                <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="length()">Calculate Tax</button>
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="greet()">Greet User</button>
                 </div>
               </div>
               <div class="row">
                 <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="gst()">Calculate Total = Price + Tax</button>
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="tell1()">Tell Time 1</button>
+                </div>
+                <div class="col m-1">
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="tell2()">Tell Time 2</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col m-1">
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="tell3()">Tell Time 3</button>
+                </div>
+                <div class="col m-1">
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="calTax()">Calculate Tax</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col m-1">
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="calTotal()">Calculate Total = Price + Tax</button>
                 </div>
               </div>
             </div>
