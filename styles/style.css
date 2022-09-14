@@ -41,3 +41,10 @@ body{
 header,main,footer{
     font-family: 'Ubuntu', sans-serif;
 }
+
+.morning,.noon{
+    color: yellow;
+}
+.eve{
+    color: midnightblue;
+}

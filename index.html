@@ -20,6 +20,7 @@
 
   <script src="./js/index.js" defer></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <script src="https://kit.fontawesome.com/c61dafd77a.js" crossorigin="anonymous" defer></script>
 
 </head>
 
@@ -58,20 +59,20 @@
     <div class="row">
 
       <div class="col-sm-12 col-md-6 my-5 d-flex align-items-center">
-        <div class="container-fluid">
           <div class="container">
             <div class="heading text-center">
               <h5>Input Feild</h5>
             </div>
             <div class="container">
               <div class="input-group p-4 border border-dark">
-                <input type="datetime-local" class="form-control input "
-                  aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="container d-flex justify-content-center align-items-center m-1">
+                <input type="datetime-local" class="form-control input " aria-label="Recipient's username"
+                  aria-describedby="button-addon2">
                 <button class="btn btn-outline-secondary clrInput" type="button" id="button-addon2">Clear</button>
+              </div>
               </div>
             </div>
           </div>
-        </div>
       </div>
 
       <div class="col-sm-12 col-md-6 my-5 d-flex align-items-center">
@@ -98,15 +99,18 @@
             <div class="p-4 border border-dark">
               <div class="row">
                 <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="getNowDay()">Get Name of Today</button>
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="getNowDay()">Get Name of
+                    Today</button>
                 </div>
                 <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="calDays()">Calculate Days Passed since I Born</button>
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="calDays()">Calculate Days Passed since
+                    I Born</button>
                 </div>
               </div>
               <div class="row">
                 <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="nextBd()">When is your next Birthday?</button>
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="nextBd()">When is your next
+                    Birthday?</button>
                 </div>
                 <div class="col m-1">
                   <button type="button" class="btn-custom m-1 btn-width" onclick="greet()">Greet User</button>
@@ -114,15 +118,18 @@
               </div>
               <div class="row">
                 <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="tell1()">Tell Time 1</button>
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="tell('Tell Time 1')">Tell Time
+                    1</button>
                 </div>
                 <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="tell2()">Tell Time 2</button>
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="tell('Tell Time 2')">Tell Time
+                    2</button>
                 </div>
               </div>
               <div class="row">
                 <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="tell3()">Tell Time 3</button>
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="tell('Tell Time 3')">Tell Time
+                    3</button>
                 </div>
                 <div class="col m-1">
                   <button type="button" class="btn-custom m-1 btn-width" onclick="calTax()">Calculate Tax</button>
@@ -130,7 +137,8 @@
               </div>
               <div class="row">
                 <div class="col m-1">
-                  <button type="button" class="btn-custom m-1 btn-width" onclick="calTotal()">Calculate Total = Price + Tax</button>
+                  <button type="button" class="btn-custom m-1 btn-width" onclick="calTotal()">Calculate Total = Price +
+                    Tax</button>
                 </div>
               </div>
             </div>
@@ -146,7 +154,7 @@
             </div>
             <div class="container">
               <div
-                class="p-4 border border-dark text-center spl-container d-flex align-items-center justify-content-center text-wrap ">
+                class="p-4 border border-dark text-center spl-container d-flex align-items-center justify-content-center text-wrap " style="height:35vh; overflow: auto;">
                 <p class="output">Your output</p>
               </div>
             </div>
