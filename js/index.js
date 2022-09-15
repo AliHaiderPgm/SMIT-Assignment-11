@@ -5,6 +5,7 @@ let output = document.querySelector('.output');
 let currentDate = document.getElementById('currentDate');
 let clrInput = document.querySelector('.clrInput');
 let clrOutput = document.querySelector('.clrOutput');
+let spanGreet = document.querySelector('.spanGreet');
 
 // Clear
 clrInput.addEventListener('click', () => {
@@ -231,3 +232,43 @@ function calTotal(){
         }
       })
 }
+
+
+
+
+// Greeting user in navbar
+function time(){
+    let newDay = new Date();
+    let hour = newDay.getHours();
+    if(hour>=5 && hour <= 11){
+        return 'Morning'
+    }
+    else if(hour>11 && hour<=17){
+        return 'Afternoon';
+    }
+    else if(hour>17 && hour<=20){
+        return 'Evening'
+    }
+    else{
+        return 'Night'
+    }
+}
+function icon(){
+    let newDay = new Date();
+    let hour = newDay.getHours();
+    if(hour>=5 && hour <= 11){
+        return '<i class="bi bi-brightness-alt-high-fill text-warning"></i>'
+    }
+    else if(hour>11 && hour<=17){
+        return '<i class="bi bi-brightness-high-fill text-warning"></i>';
+    }
+    else if(hour>17 && hour<=20){
+        return '<i class="bi bi-moon-fill"></i>'
+    }
+    else{
+        return '<i class="bi bi-moon-stars-fill "></i>'
+    }
+}
+setInterval(() => {
+    spanGreet.innerHTML = `${icon()} Good ${time()} Sir!`
+}, 1000);
