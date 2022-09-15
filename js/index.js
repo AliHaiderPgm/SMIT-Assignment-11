@@ -52,7 +52,9 @@ function click(){
 
 
 // Setting current date and time
+setInterval(() => {
 defaultVal(currentTime());
+}, 1000);
 
 // Get day
 function getNowDay(){
@@ -185,6 +187,13 @@ function calTax(){
           if (!value) {
             return 'Enter some amount!'
           }
+          else if(value<0){
+            Swal.fire(
+                'Inavlid Amount',
+                'Amount must be a psoitive number.',
+                'error'
+            )
+          }
           else{
             value = Math.ceil((17/100)*value);
             out(`Your total GST as per 17% will be Rs.${value}`,click())
@@ -206,6 +215,13 @@ function calTotal(){
         inputValidator: (value) => {
           if (!value) {
             return 'Enter some amount!'
+          }
+          else if(value<0){
+            Swal.fire(
+                'Inavlid Amount',
+                'Amount must be a psoitive number.',
+                'error'
+            )
           }
           else{
             value = parseInt(value);
