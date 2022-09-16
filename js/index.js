@@ -1,4 +1,4 @@
-import { fire } from 'sweetalert2';
+// import { fire } from 'sweetalert2';
 // import { default as Swal } from "sweetalert2";  
 
 let input = document.querySelector('.input');
@@ -18,7 +18,7 @@ clrOutput.addEventListener('click', () => {
 
 // Output Function
 function out(outputText,time){
-    output.innerHTML = `${outputText}<br>${time}` ;
+    output.innerHTML = `${outputText}<br>${time}<br>` ;
 }
 // Default value
 function defaultVal(text){
@@ -75,7 +75,7 @@ function calDays(){
     let msToday = nowTime.getTime();
     let msDob = bornTime.getTime();
     if(bornTime=='Invalid Date'){
-        fire(
+        Swal.fire(
             'Invalid Value',
             'Please first enter your date of birth in input feild.',
             'error'
@@ -83,7 +83,7 @@ function calDays(){
           return
     }
     else if(msDob>msToday){
-        fire(
+        Swal.fire(
             'Invalid Value',
             'Please enter valid date of birth in input feild.',
             'error'
@@ -110,7 +110,7 @@ function nextBd(){
     msNxtBd = nxtBd.getTime();
     console.log(nxtBd)
     if(nxtBd=='Invalid Date' || msNxtBd<msTimeNow){
-        fire(
+        Swal.fire(
             'Inavlid Date',
             'Please enter your next date of birth in input feild!',
             'error'
@@ -133,16 +133,16 @@ function greet(){
     let time = currentTime();
     let hour = time.getHours();
     if(hour>4 && hour<=12){
-        out(`<i class="fa-solid fa-mountain-sun morning"></i> Good Morning Sir!`,click());
+        out(`<i class="bi bi-brightness-alt-high-fill text-warning"></i> Good Morning Sir!`,click());
     }
     else if(hour>12 && hour<=17){
-        out(`<i class="fa-solid fa-sun noon"></i> Good Afternoon Sir!`,click());
+        out(`<i class="bi bi-brightness-high-fill text-warning"></i> Good Afternoon Sir!`,click());
     }
     else if(hour>17 && hour<=19){
-        out(`<i class="fa-solid fa-mountain-sun eve"></i> Good Evening Sir!`,click());
+        out(`<i class="bi bi-moon-fill"></i> Good Evening Sir!`,click());
     }
     else{
-        out(`<i class="fa-solid fa-moon night"></i> Good Night Sir!`,click());
+        out(`<i class="bi bi-moon-stars-fill "></i> Good Night Sir!`,click());
     }
 }
 
@@ -179,7 +179,7 @@ function tell(btnName){
 
 // Calculate tax
 function calTax(){
-    fire({
+    Swal.fire({
         title: 'Enter your amount',
         input: 'number',
         inputPlaceholder:'Numbers only',
@@ -190,7 +190,7 @@ function calTax(){
             return 'Enter some amount!'
           }
           else if(value<0){
-            fire(
+            Swal.fire(
                 'Inavlid Amount',
                 'Amount must be a psoitive number.',
                 'error'
@@ -208,7 +208,7 @@ function calTax(){
 
 // Calculate Total Amount
 function calTotal(){
-    fire({
+    Swal.fire({
         title: 'Enter your amount',
         input: 'number',
         inputPlaceholder:'Numbers only',
@@ -272,7 +272,7 @@ function icon(){
 }
 
 function userName(){
-    fire({
+    Swal.fire({
         title:'Enter your name:',
         input:'text',
         inputPlaceholder:'Your name here',
