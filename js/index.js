@@ -269,6 +269,34 @@ function icon(){
         return '<i class="bi bi-moon-stars-fill "></i>'
     }
 }
+
+function userName(){
+    Swal.fire({
+        title:'Enter your name:',
+        input:'text',
+        inputPlaceholder:'Your name here',
+        showCancelButton:'true',
+        inputValidator:(value) =>{
+            if(value.trim()==''){
+                Swal.fire(
+                    'Inavlid Name',
+                    'Please enter your name',
+                    'error'
+                )
+            }
+            else{
+                localStorage.setItem('Name',value);
+            }
+        }
+    }
+    )
+}
 setInterval(() => {
-    spanGreet.innerHTML = `${icon()} Good ${time()} Sir!`
+    let localStorageName = localStorage.getItem('Name');
+    if(localStorageName==null){
+        spanGreet.innerHTML = `${icon()} Good ${time()} Sir!`
+    }
+    else{
+        spanGreet.innerHTML = `${icon()} Good ${time()} ${localStorageName}!`
+    }
 }, 1000);
