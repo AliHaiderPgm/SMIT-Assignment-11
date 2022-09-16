@@ -1,3 +1,4 @@
+import { fire } from 'sweetalert2';
 // import { default as Swal } from "sweetalert2";  
 
 let input = document.querySelector('.input');
@@ -74,7 +75,7 @@ function calDays(){
     let msToday = nowTime.getTime();
     let msDob = bornTime.getTime();
     if(bornTime=='Invalid Date'){
-        Swal.fire(
+        fire(
             'Invalid Value',
             'Please first enter your date of birth in input feild.',
             'error'
@@ -82,7 +83,7 @@ function calDays(){
           return
     }
     else if(msDob>msToday){
-        Swal.fire(
+        fire(
             'Invalid Value',
             'Please enter valid date of birth in input feild.',
             'error'
@@ -103,13 +104,13 @@ function calDays(){
 // Next Birthdday
 function nextBd(){
     let timeNow = currentTime();
-    msTimeNow = timeNow.getTime();
+    let msTimeNow = timeNow.getTime();
     inputVal = input.value;
     let nxtBd = new Date(inputVal);
     msNxtBd = nxtBd.getTime();
     console.log(nxtBd)
     if(nxtBd=='Invalid Date' || msNxtBd<msTimeNow){
-        Swal.fire(
+        fire(
             'Inavlid Date',
             'Please enter your next date of birth in input feild!',
             'error'
@@ -178,7 +179,7 @@ function tell(btnName){
 
 // Calculate tax
 function calTax(){
-    Swal.fire({
+    fire({
         title: 'Enter your amount',
         input: 'number',
         inputPlaceholder:'Numbers only',
@@ -189,7 +190,7 @@ function calTax(){
             return 'Enter some amount!'
           }
           else if(value<0){
-            Swal.fire(
+            fire(
                 'Inavlid Amount',
                 'Amount must be a psoitive number.',
                 'error'
@@ -207,7 +208,7 @@ function calTax(){
 
 // Calculate Total Amount
 function calTotal(){
-    Swal.fire({
+    fire({
         title: 'Enter your amount',
         input: 'number',
         inputPlaceholder:'Numbers only',
@@ -218,7 +219,7 @@ function calTotal(){
             return 'Enter some amount!'
           }
           else if(value<0){
-            Swal.fire(
+            fire(
                 'Inavlid Amount',
                 'Amount must be a psoitive number.',
                 'error'
@@ -271,14 +272,14 @@ function icon(){
 }
 
 function userName(){
-    Swal.fire({
+    fire({
         title:'Enter your name:',
         input:'text',
         inputPlaceholder:'Your name here',
         showCancelButton:'true',
         inputValidator:(value) =>{
             if(value.trim()==''){
-                Swal.fire(
+                fire(
                     'Inavlid Name',
                     'Please enter your name',
                     'error'
