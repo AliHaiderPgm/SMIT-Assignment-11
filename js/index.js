@@ -219,7 +219,7 @@ function calTotal(){
             return 'Enter some amount!'
           }
           else if(value<0){
-            fire(
+            Swal.fire(
                 'Inavlid Amount',
                 'Amount must be a psoitive number.',
                 'error'
@@ -273,13 +273,13 @@ function icon(){
 
 function userName(){
     Swal.fire({
-        title:'Enter your name:',
+        title:'Enter your nick name:',
         input:'text',
         inputPlaceholder:'Your name here',
         showCancelButton:'true',
         inputValidator:(value) =>{
             if(value.trim()==''){
-                fire(
+                Swal.fire(
                     'Inavlid Name',
                     'Please enter your name',
                     'error'
